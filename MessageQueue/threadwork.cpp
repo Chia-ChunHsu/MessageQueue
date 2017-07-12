@@ -7,6 +7,7 @@ threadWork::threadWork()
         pure = new PureCProgram(queue);
     }
     pure->start();
+    //Adding Completed
     //qDebug()<<queue.size();
 }
 

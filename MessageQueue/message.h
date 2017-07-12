@@ -5,7 +5,6 @@
 class Message
 {
 public:
-    Message(){}
     Message(const char* message):_mes(message){}
     const char* getMessage(){return _mes.c_str();}
 private:
