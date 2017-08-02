@@ -2,7 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <threadwork.h>
+#include <wqueue.h>
+#include <consumerthread.h>
+#include <workitem.h>
+#include <Windows.h>
+#include <qtcthread.h>
+#include <QTimer>
 namespace Ui {
 class MainWindow;
 }
@@ -20,12 +25,12 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_pushButton_3_clicked();
-
 private:
     Ui::MainWindow *ui;
-    QThread *thread = 0;
-    threadWork *tWorks =0;
+    wqueue<WorkItem> queue;
+    QtCThread *thread = 0;
+    QTimer *timer = 0;
 };
 
 #endif // MAINWINDOW_H
+

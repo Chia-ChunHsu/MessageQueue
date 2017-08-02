@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2017-06-27T13:38:37
+# Project created by QtCreator 2017-06-28T09:42:46
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = MessageQueue
+TARGET = MessageQueueBasic
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,19 +26,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    purecprogram.cpp \
-    threadwork.cpp \
-    mythread.cpp \
-    message.cpp
+    thread.cpp \
+    qtcthread.cpp
 
 HEADERS += \
         mainwindow.h \
-    purecprogram.h \
-    threadwork.h \
-    myqueue.h \
-    mythread.h \
-    message.h
+    wqueue.h \
+    workitem.h \
+    consumerthread.h \
+    thread.h \
+    qtcthread.h
 
 FORMS += \
         mainwindow.ui
-
